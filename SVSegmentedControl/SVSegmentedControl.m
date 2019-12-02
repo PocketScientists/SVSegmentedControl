@@ -112,7 +112,7 @@
 
 - (void)updateSectionRects {
     
-    int c = [self.sectionTitles count];
+    NSUInteger c = [self.sectionTitles count];
 	int i = 0;
 	
     if(CGRectIsEmpty(self.frame)) {
