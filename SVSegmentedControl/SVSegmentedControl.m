@@ -191,7 +191,7 @@
         UIAccessibilityElement *element = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self];
         element.isAccessibilityElement = YES;
         element.accessibilityLabel = [NSString stringWithFormat:NSLocalizedString(@"%@ tab",), title];
-        element.accessibilityHint = [NSString stringWithFormat:NSLocalizedString(@"Tab %d of %d",), i + 1, self.sectionTitles.count];
+        element.accessibilityHint = [NSString stringWithFormat:NSLocalizedString(@"Tab %lu of %lu",), i + 1, self.sectionTitles.count];
         
         [self.accessibilityElements addObject:element];
         i++;
@@ -341,7 +341,7 @@
         self.thumb.secondImageView.alpha = 0;
     }
     
-	int index;
+	NSUInteger index;
 	
 	if(self.snapToIndex != -1)
 		index = self.snapToIndex;
